@@ -1,0 +1,18 @@
+import datetime as dt
+class Laptop:
+    def __init__(self, name, processor):
+        self.name = name
+        self.processor = processor
+        self.date = dt.date(2020, 3, 12)
+        self.gaming = True
+    def buydate(self):
+        return f"{self.name}bought on{self.date:%m:%d:%y}"
+    def activate(self, truefalse):
+         self.gaming= truefalse
+lap_name = Laptop ('Dell','Intel')
+print(lap_name.name)
+print(lap_name.processor)
+print(lap_name.name + " gaming is " + str(lap_name.gaming))
+print(lap_name.buydate())
+lap_name.activate(False)
+print(lap_name.gaming)
